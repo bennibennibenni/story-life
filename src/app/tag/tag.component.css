@@ -1,0 +1,8 @@
+.card-container {
+    display: -webkit-inline-box;
+    flex-wrap: wrap;
+    justify-content: right;
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+  

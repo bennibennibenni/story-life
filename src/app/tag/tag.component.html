@@ -1,0 +1,10 @@
+<div class="card-container" *ngFor="let TagData of TagList.data">
+  <mat-chip-list>
+    <mat-chip
+      [routerLink]="['/tag/', TagData, 'post']"
+      color="primary"
+      selected
+      >{{ TagData }}</mat-chip
+    >
+  </mat-chip-list>
+</div>

@@ -1,0 +1,16 @@
+.example-card {
+  border: 2px solid blue;
+  margin: 5px;
+  width: 260px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.image-container {
+  height: 300px;
+}
