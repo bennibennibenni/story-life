@@ -19,7 +19,12 @@ export class UserComponent {
 
   // Request Previous Page
   onPrev() {
+    if (this.current <= 0) {
+      this.current = 0;
+      return;
+    }
     this.prev = this.current--;
+
     return this.userService.GetUsersList(this.current).subscribe((data: {}) => {
       this.UsersList = data;
     });
@@ -28,9 +33,10 @@ export class UserComponent {
   // Request Next Page
   onNext() {
     this.prev = this.current++;
-    return this.userService.GetUsersList(this.current).subscribe((data: {}) => {
+    this.userService.GetUsersList(this.current).subscribe((data: {}) => {
       this.UsersList = data;
     });
+    window.scroll(0,0);
   }
 
   // Users list

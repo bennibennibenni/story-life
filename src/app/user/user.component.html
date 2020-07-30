@@ -28,6 +28,9 @@
       </mat-card-actions>
     </mat-card>
   </div>
+</div>
+
+<div *ngIf="UsersList.data">
   <button (click)="onPrev()" mat-stroked-button>Prev</button>
   <button (click)="onNext()" mat-stroked-button [routerLink]="['/user']">
     Next

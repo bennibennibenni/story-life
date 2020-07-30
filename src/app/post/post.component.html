@@ -1,44 +1,64 @@
-<div class="card-container" *ngFor="let PostData of PostList.data">
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div
-        mat-card-avatar
-        class="example-header-image"
-        style="--url: url({{ PostData.owner.picture }})"
-      ></div>
-      <mat-card-title
-        >{{ PostData.owner.firstName }}
-        {{ PostData.owner.lastName }}</mat-card-title
-      >
-      <mat-card-subtitle>{{ PostData.owner.email }}</mat-card-subtitle>
-    </mat-card-header>
-    <img
-      class="image-container"
-      mat-card-image
-      src="{{ PostData.image }}"
-      alt="Photo of {{ PostData.firstName }} {{ PostData.lastName }}"
-    />
-    <mat-card-content>
-      <p>
-        {{ PostData.text }}
-      </p>
+<div class="tag-container" *ngFor="let TagData of TagList.data">
+  <mat-chip-list>
+    <mat-chip
+      [routerLink]="['/tag/', TagData, 'post']"
+      color="primary"
+      selected
+      >{{ TagData }}</mat-chip
+    >
+  </mat-chip-list>
+</div>
+
+<div *ngIf="TagList.data">
+  <div class="card-container" *ngFor="let PostData of PostList.data">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div
+          mat-card-avatar
+          class="example-header-image"
+          style="--url: url({{ PostData.owner.picture }})"
+        ></div>
+        <mat-card-title
+          >{{ PostData.owner.firstName }}
+          {{ PostData.owner.lastName }}</mat-card-title
+        >
+        <mat-card-subtitle>{{ PostData.owner.email }}</mat-card-subtitle>
+      </mat-card-header>
+      <img
+        class="image-container"
+        mat-card-image
+        src="{{ PostData.image }}"
+        alt="Photo of {{ PostData.firstName }} {{ PostData.lastName }}"
+      />
+      <mat-card-content>
+        <p>
+          {{ PostData.text }}
+        </p>
+        <mat-divider></mat-divider>
+        <div class="divider">
+          <mat-chip-list>
+            <mat-chip
+              *ngFor="let PostTagData of PostData.tags"
+              [routerLink]="['/tag/', PostTagData, 'post']"
+            >
+              {{ PostTagData }}
+            </mat-chip>
+          </mat-chip-list>
+        </div>
+      </mat-card-content>
       <mat-divider></mat-divider>
-      <div class="divider">
-        <mat-chip-list>
-          <mat-chip
-            *ngFor="let PostTagData of PostData.tags"
-            [routerLink]="['/tag/', PostTagData, 'post']"
-          >
-            {{ PostTagData }}
-          </mat-chip>
-        </mat-chip-list>
-      </div>
-    </mat-card-content>
-    <mat-divider></mat-divider>
-    <mat-card-actions>
-      <button mat-button [routerLink]="['/post/', PostData.id, 'comment']">
-        View Comment
-      </button>
-    </mat-card-actions>
-  </mat-card>
+      <mat-card-actions>
+        <button mat-button [routerLink]="['/post/', PostData.id, 'comment']">
+          View Comment
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div *ngIf="PostList.data">
+    <button (click)="onPrev()" mat-stroked-button>Prev</button>
+    <button (click)="onNext()" mat-stroked-button [routerLink]="['/post']">
+      Next
+    </button>
+  </div>
 </div>

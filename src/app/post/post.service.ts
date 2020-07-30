@@ -14,14 +14,15 @@ export class PostService {
   // Http Headers
   httpOptions = {
     headers: new HttpHeaders({
-      'app-id': 'thvGiP7cYMUUW9sP2GjZ',
+      'app-id': 'IsvaxAMhFNDRv8ioOso3',
     }),
   };
 
   // Get All Post
-  GetPostsList(): Observable<Post> {
+  GetPostsList(current: number): Observable<Post> {
+    console.log (current)
     return this.http
-      .get<Post>(this.baseUrl + '/post', this.httpOptions)
+      .get<Post>(this.baseUrl + '/post?page=' + current, this.httpOptions)
       .pipe(retry(1), catchError(this.errorHandl));
   }
 

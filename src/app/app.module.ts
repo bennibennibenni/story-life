@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -12,11 +13,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
-import { MatPaginatorModule } from '@angular/material/paginator';
-
-import { LoaderService } from './services/loader.service';
-import { LoaderInterceptor } from './interceptors/loader-interceptor.service';
-import { MyLoaderComponent } from './components/my-loader/my-loader.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserComponent } from './user/user.component';
@@ -30,7 +26,6 @@ import { TagPostComponent } from './tag-post/tag-post.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MyLoaderComponent,
     PageNotFoundComponent,
     UserComponent,
     TagComponent,
@@ -39,7 +34,6 @@ import { TagPostComponent } from './tag-post/tag-post.component';
     UserPostComponent,
     PostCommentComponent,
     TagPostComponent,
-    MyLoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,12 +47,9 @@ import { TagPostComponent } from './tag-post/tag-post.component';
     MatSidenavModule,
     MatListModule,
     MatChipsModule,
-    MatPaginatorModule,
+    NgHttpLoaderModule.forRoot(),
   ],
-  providers: [
-    LoaderService,
-    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
