@@ -1,16 +1,26 @@
 .example-card {
-  border: 2px solid blue;
+  border: 2px solid #673ab7;
   margin: 5px;
   width: 260px;
+  text-align: center;
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.mat-card-header {
+  display: unset;
+}
+
+.right {
+  float: right;
   margin-top: 16px;
 }
 
-.image-container {
-  height: 300px;
+.left {
+  float: left;
+  margin-top: 16px;
 }

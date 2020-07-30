@@ -14,13 +14,12 @@ export class PostService {
   // Http Headers
   httpOptions = {
     headers: new HttpHeaders({
-      'app-id': 'IsvaxAMhFNDRv8ioOso3',
+      'app-id': '9jFM6F2ZnlFiCYXRJlqo',
     }),
   };
 
   // Get All Post
   GetPostsList(current: number): Observable<Post> {
-    console.log (current)
     return this.http
       .get<Post>(this.baseUrl + '/post?page=' + current, this.httpOptions)
       .pipe(retry(1), catchError(this.errorHandl));
@@ -43,7 +42,6 @@ export class PostService {
       // Get server-side error
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
-    console.log(errorMessage);
     return throwError(errorMessage);
   }
 }

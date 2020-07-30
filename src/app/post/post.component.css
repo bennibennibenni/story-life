@@ -1,6 +1,5 @@
 .example-card {
-  max-width: 400px;
-  border: 2px solid blue;
+  border: 2px solid #673ab7;
   margin: 5px;
 }
 
@@ -10,10 +9,9 @@
 }
 
 .card-container {
-  display: -webkit-inline-box;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1px;
 }
 
 .image-container {
@@ -24,11 +22,12 @@
   margin-top: 30px;
 }
 
-.tag-container {
-  display: -webkit-inline-box;
-  flex-wrap: wrap;
-  justify-content: right;
+.right {
+  float: right;
   margin-top: 16px;
-  margin-left: 16px;
 }
 
+.left {
+  float: left;
+  margin-top: 16px;
+}

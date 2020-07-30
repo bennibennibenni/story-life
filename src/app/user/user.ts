@@ -3,6 +3,10 @@ export class User {
   title: string;
   firstName: string;
   lastName: string;
-  picture: string;
+  gender: string;
   email: string;
+  dateOfBirth: string;
+  registerDate: string;
+  phone: string;
+  picture: string;
 }

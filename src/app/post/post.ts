@@ -1,3 +1,8 @@
 export class Post {
-  page: number;
+  text: string;
+  image: string;
+  likes: number;
+  link: string;
+  tags: [string];
+  publishDate: string;
 }

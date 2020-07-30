@@ -26,6 +26,8 @@
       <div class="divider">
         <mat-chip-list>
           <mat-chip
+            color="primary"
+            selected
             *ngFor="let TagData of UserPostData.tags"
             [routerLink]="['/tag/', TagData, 'post']"
           >

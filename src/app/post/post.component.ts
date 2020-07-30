@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from './../post/post.service';
-import { TagService } from './../tag/tag.service';
 
 @Component({
   selector: 'app-post',
@@ -11,13 +10,11 @@ export class PostComponent implements OnInit {
   current = 0;
   prev = -1;
   PostList: any = [];
-  TagList: any = [];
 
-  constructor(public postService: PostService, public tagService: TagService) {}
+  constructor(public postService: PostService) {}
 
   ngOnInit() {
     this.loadPost();
-    this.loadTag();
   }
 
   // Request Previous Page
@@ -27,10 +24,10 @@ export class PostComponent implements OnInit {
       return;
     }
     this.prev = this.current--;
-
-    return this.postService.GetPostsList(this.current).subscribe((data: {}) => {
+    this.postService.GetPostsList(this.current).subscribe((data: {}) => {
       this.PostList = data;
     });
+    window.scroll(0, 0);
   }
 
   // Request Next Page
@@ -42,11 +39,6 @@ export class PostComponent implements OnInit {
     window.scroll(0, 0);
   }
 
-  loadTag() {
-    return this.tagService.GetTagsList().subscribe((data: {}) => {
-      this.TagList = data;
-    });
-  }
   // Post list
   loadPost() {
     return this.postService.GetPostsList(this.current).subscribe((data: {}) => {

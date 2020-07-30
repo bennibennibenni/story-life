@@ -5,3 +5,7 @@
 *:focus {
   outline: none;
 }
+
+.container {
+  margin: 5%;
+}

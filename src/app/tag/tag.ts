@@ -1,3 +1,3 @@
 export class Tag {
-  page: number;
+  title: string;
 }

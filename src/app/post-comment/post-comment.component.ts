@@ -24,7 +24,6 @@ export class PostCommentComponent implements OnInit {
   }
 
   loadPostComment() {
-    console.log(this.id);
     return this.postService.GetPostComment(this.id).subscribe((data: {}) => {
       this.userData = data;
     });

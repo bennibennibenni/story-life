@@ -11,7 +11,7 @@ import { TagComponent } from './tag/tag.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/user', pathMatch: 'full' },
+  { path: '', redirectTo: '/user', pathMatch: 'full' },
   { path: 'user', component: UserComponent },
   { path: 'user/:id', component: UserDetailComponent },
   { path: 'post/:id', component: UserPostComponent },

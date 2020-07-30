@@ -24,10 +24,10 @@ export class UserComponent {
       return;
     }
     this.prev = this.current--;
-
-    return this.userService.GetUsersList(this.current).subscribe((data: {}) => {
+    this.userService.GetUsersList(this.current).subscribe((data: {}) => {
       this.UsersList = data;
     });
+    window.scroll(0,0);
   }
 
   // Request Next Page

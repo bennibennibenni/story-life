@@ -1,23 +1,19 @@
 <div class="card-container">
-  <div class="content" role="main" *ngFor="let UserData of UsersList.data">
+  <div *ngFor="let UserData of UsersList.data">
     <mat-card class="example-card">
+      <img
+        mat-card-image
+        src="{{ UserData.picture }}"
+        alt="Photo of {{ UserData.firstName }} {{ UserData.lastName }}"
+      />
       <mat-card-header>
         <mat-card-title
           >{{ UserData.firstName }} {{ UserData.lastName }}</mat-card-title
         >
         <mat-card-subtitle>{{ UserData.email }}</mat-card-subtitle>
       </mat-card-header>
-      <img
-        class="image-container"
-        mat-card-image
-        src="{{ UserData.picture }}"
-        alt="Photo of {{ UserData.firstName }} {{ UserData.lastName }}"
-      />
-      <mat-card-content>
-        <p>
-          {{ UserData.id }}
-        </p>
-      </mat-card-content>
+
+      <mat-divider></mat-divider>
       <mat-card-actions>
         <button mat-button [routerLink]="['/user/', UserData.id]">
           View Profile
@@ -30,9 +26,27 @@
   </div>
 </div>
 
-<div *ngIf="UsersList.data">
-  <button (click)="onPrev()" mat-stroked-button>Prev</button>
-  <button (click)="onNext()" mat-stroked-button [routerLink]="['/user']">
-    Next
-  </button>
+<div class="left">
+  <div *ngIf="UsersList.data">
+    <mat-chip
+      *ngIf="UsersList.page > 0"
+      (click)="onPrev()"
+      color="primary"
+      selected
+      >Prev</mat-chip
+    >
+  </div>
+</div>
+
+<div class="right">
+  <mat-chip-list>
+    <mat-chip
+      *ngIf="UsersList.page <= 3"
+      (click)="onNext()"
+      color="primary"
+      selected
+      [routerLink]="['/user']"
+      >Next</mat-chip
+    >
+  </mat-chip-list>
 </div>

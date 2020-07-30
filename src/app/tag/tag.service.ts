@@ -14,7 +14,7 @@ export class TagService {
   // Http Headers
   httpOptions = {
     headers: new HttpHeaders({
-      'app-id': 'IsvaxAMhFNDRv8ioOso3',
+      'app-id': '9jFM6F2ZnlFiCYXRJlqo',
     }),
   };
 
@@ -42,7 +42,6 @@ export class TagService {
       // Get server-side error
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
-    console.log(errorMessage);
     return throwError(errorMessage);
   }
 }
