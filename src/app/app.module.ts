@@ -22,6 +22,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserPostComponent } from './user-post/user-post.component';
 import { PostCommentComponent } from './post-comment/post-comment.component';
 import { TagPostComponent } from './tag-post/tag-post.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,7 @@ import { TagPostComponent } from './tag-post/tag-post.component';
     MatListModule,
     MatChipsModule,
     NgHttpLoaderModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent],
