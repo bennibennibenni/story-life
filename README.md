@@ -23,6 +23,6 @@ If you are new contributor, please read this before doing more.
 
 ## 👷 Contributor
 
-+ [Benni](https://http://github.com/bennibennibenni)
++ [Benni](https://github.com/bennibennibenni)
 
 

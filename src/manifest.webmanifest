@@ -1,6 +1,6 @@
 {
-  "name": "user-macroad",
-  "short_name": "user-macroad",
+  "name": "userMacroad",
+  "short_name": "userMacroad",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
