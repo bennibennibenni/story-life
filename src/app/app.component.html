@@ -2,14 +2,14 @@
   <mat-toolbar-row>
     <span>{{ title }}</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button>
-      <mat-icon [routerLink]="'/user'">account_circle</mat-icon>
+    <button mat-icon-button [routerLink]="'/user'">
+      <mat-icon>account_circle</mat-icon>
     </button>
-    <button mat-icon-button>
-      <mat-icon [routerLink]="'/post'">forum</mat-icon>
+    <button mat-icon-button [routerLink]="'/post'">
+      <mat-icon>forum</mat-icon>
     </button>
-    <button mat-icon-button>
-      <mat-icon [routerLink]="'/tag'">loyalty</mat-icon>
+    <button mat-icon-button [routerLink]="'/tag'">
+      <mat-icon>loyalty</mat-icon>
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
@@ -17,11 +17,5 @@
 <div class="container">
   <router-outlet></router-outlet>
 </div>
-
-<!-- <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Footer</span>
-  </mat-toolbar-row>
-</mat-toolbar> -->
 
 <ng-http-loader [backgroundColor]="'#673ab7'"></ng-http-loader>
