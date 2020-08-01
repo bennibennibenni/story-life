@@ -1,6 +1,7 @@
 .example-card {
   border: 2px solid #673ab7;
   margin: 5px;
+  width: 600px;
 }
 
 .example-header-image {
@@ -12,10 +13,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.image-container {
-  height: 600px;
 }
 
 .divider {
