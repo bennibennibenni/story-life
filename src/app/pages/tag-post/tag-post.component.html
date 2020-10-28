@@ -1,0 +1,49 @@
+<div class="container container-sm">
+  <div class="row">
+    <div class="col-12 col" *ngFor="let TagPostData of tagData.data">
+      <div class="border border-primary">
+        <div class="card-body" style="padding: 40px">
+          <div class="row">
+            <div class="col-3">
+              <img
+                src="{{ TagPostData.owner.picture }}"
+                alt="Card example image"
+              />
+            </div>
+            <div class="col-lg-4">
+              <h5 class="card-title">
+                {{ TagPostData.owner.firstName }}
+                {{ TagPostData.owner.lastName }}
+              </h5>
+              <h5 class="card-title">
+                {{ TagPostData.publishDate }}
+              </h5>
+            </div>
+          </div>
+          <img src="{{ TagPostData.image }}" alt="Card example image" />
+
+          <h5 class="card-subtitle">
+            <button
+              class="btn-secondary btn-small"
+              color="primary"
+              *ngFor="let PostTagData of TagPostData.tags"
+              [routerLink]="['/tag/', PostTagData, 'post']"
+            >
+              {{ PostTagData }}
+            </button>
+          </h5>
+          <p class="card-text">
+            {{ TagPostData.text }}
+          </p>
+          <button class="btn-secondary">{{ TagPostData.likes }} Likes</button>
+          <button
+            class="btn-secondary"
+            [routerLink]="['/post/', TagPostData.id, 'comment']"
+          >
+            View Comment
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

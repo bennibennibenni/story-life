@@ -1,0 +1,30 @@
+<div class="container-lg">
+  <div class="row">
+    <div class="col-lg-4 col-xs-12 col" *ngFor="let UserData of UsersList.data">
+      <div class="border border-primary">
+        <img src="{{ UserData.picture }}" alt="Card example image" />
+
+        <div class="card-body" style="padding: 20px">
+          <h4 class="card-title">
+            {{ UserData.firstName }} {{ UserData.lastName }}
+          </h4>
+          <h5 class="card-subtitle">
+            {{ UserData.email }}
+          </h5>
+          <!-- <p class="card-text">
+            {{ UserData.text }}
+          </p> -->
+          <button class="btn-secondary" [routerLink]="['/user/', UserData.id]">
+            View Profile
+          </button>
+          <button class="btn-secondary" [routerLink]="['/post/', UserData.id]">
+            View Post
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="to-top">
+      <div (click)="goToTop()" class="paper-btn margin">^</div>
+    </div>
+  </div>
+</div>

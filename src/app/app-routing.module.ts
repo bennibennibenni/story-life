@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { UserComponent } from './user/user.component';
-import { UserDetailComponent } from './user-detail/user-detail.component';
-import { UserPostComponent } from './user-post/user-post.component';
-import { PostCommentComponent } from './post-comment/post-comment.component';
-import { TagPostComponent } from './tag-post/tag-post.component';
-import { PostComponent } from './post/post.component';
-import { TagComponent } from './tag/tag.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UserComponent } from './pages/user/user.component';
+import { UserDetailComponent } from './pages/user-detail/user-detail.component';
+import { UserPostComponent } from './pages/user-post/user-post.component';
+import { PostCommentComponent } from './pages/post-comment/post-comment.component';
+import { TagPostComponent } from './pages/tag-post/tag-post.component';
+import { PostComponent } from './pages/post/post.component';
+import { TagComponent } from './pages/tag/tag.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/user', pathMatch: 'full' },
@@ -23,7 +23,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled'
+  })]
+  ,
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

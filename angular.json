@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "user-macroad": {
+    "story-life": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/user-macroad",
+            "outputPath": "dist/story-life",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "user-macroad:build"
+            "browserTarget": "story-life:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "user-macroad:build:production"
+              "browserTarget": "story-life:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "user-macroad:build"
+            "browserTarget": "story-life:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "user-macroad:serve"
+            "devServerTarget": "story-life:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "user-macroad:serve:production"
+              "devServerTarget": "story-life:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "user-macroad"
+  "defaultProject": "story-life"
 }

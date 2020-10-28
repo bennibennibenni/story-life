@@ -1,10 +1,10 @@
 <div align="center">
-  <strong>UserMacroad</strong>
+  <strong>Story Life</strong>
 </div>
 
 ## ✨ Live
 
-+ [Website](https://user-macroad.vercel.app)
++ [Website](https://story-life.vercel.app)
 
 ## :bookmark: Angular CLI
 

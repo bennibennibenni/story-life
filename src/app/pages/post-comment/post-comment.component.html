@@ -1,0 +1,35 @@
+<div class="container" *ngIf="userData.data?.length != 0">
+  <div
+    class="border border-primary"
+    style="margin-top: 40px"
+    *ngFor="let UserPostData of userData.data"
+  >
+    <div class="card-body" style="padding: 20px">
+      <div class="row">
+        <div class="col-2">
+          <img
+            src="{{ UserPostData.owner.picture }}"
+            alt="Card example image"
+          />
+        </div>
+        <div class="col-4">
+          <h5 class="card-title">
+            {{ UserPostData.owner.firstName }} {{ UserPostData.owner.lastName }}
+          </h5>
+          <h5 class="card-title">
+            {{ UserPostData.publishDate }}
+          </h5>
+        </div>
+      </div>
+
+      <h5 class="card-text">{{ UserPostData.message }}</h5>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="userData.data?.length == 0">
+  <div class="border border-primary" style="margin-top: 40px">
+    <div class="col">
+      <p class="card-text">There is no comment on this post</p>
+    </div>
+  </div>
+</div>

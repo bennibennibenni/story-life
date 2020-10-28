@@ -2,10 +2,6 @@
   flex: 1 1 auto;
 }
 
-*:focus {
-  outline: none;
-}
-
-.container {
-  margin: 5%;
+.pointer {
+  cursor: pointer;
 }

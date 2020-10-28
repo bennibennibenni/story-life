@@ -1,21 +1,9 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>{{ title }}</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button [routerLink]="'/user'">
-      <mat-icon>account_circle</mat-icon>
-    </button>
-    <button mat-icon-button [routerLink]="'/post'">
-      <mat-icon>forum</mat-icon>
-    </button>
-    <button mat-icon-button [routerLink]="'/tag'">
-      <mat-icon>loyalty</mat-icon>
-    </button>
-  </mat-toolbar-row>
-</mat-toolbar>
+<app-header></app-header>
 
 <div class="container">
   <router-outlet></router-outlet>
 </div>
 
-<ng-http-loader [backgroundColor]="'#673ab7'"></ng-http-loader>
+<app-footer></app-footer>
+
+<ng-http-loader [backgroundColor]="'#673ab7'" spinner="sk-double-bounce"></ng-http-loader>
