@@ -1,0 +1,49 @@
+.to-top {
+  opacity: 1;
+  display: inline-block;
+  padding: 1em;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+
+.to-top .paper-btn {
+  padding: 0.6em 1em;
+  border-top-left-radius: 185px 160px;
+  border-top-right-radius: 200px 195px;
+  border-bottom-right-radius: 160px 195px;
+  border-bottom-left-radius: 185px 190px;
+}
+
+.demo-title:hover + .to-top {
+  opacity: 0;
+}
+
+#top {
+  max-width: 1440px;
+}
+
+.card-name {
+  padding-left: 18px;
+  font-family: Patrick Hand SC, sans-serif;
+  font-weight: 400;
+}
+
+.card-date {
+  padding-left: 18px;
+  padding-top: 10px;
+  font-family: Patrick Hand SC, sans-serif;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 0) {
+  .col-9 {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .lg-4 {
+    font-size: 20px;
+  }
+}
