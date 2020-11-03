@@ -1,11 +1,11 @@
 <div class="container-md col" *ngIf="userData.id">
   <div class="border border-primary">
     <div class="row flex-middle">
-      <div class="col-xs-12 col-lg-3 col">
+      <div class="col-xs-12 lg-4 col" style="padding-left: 70px">
         <img src="{{ userData.picture }}" />
       </div>
 
-      <div class="col-lg-9 col ">
+      <div class="lg-8 col">
         <h5>ID : {{ userData.id }}</h5>
         <h5>First Name : {{ userData.firstName }}</h5>
         <h5>Last Name : {{ userData.lastName }}</h5>
@@ -18,7 +18,7 @@
           {{ userData.location.street }} {{ userData.location.city }}
           {{ userData.location.country }}
         </h5>
-        <h5>Register Date :{{ userData.registerDate }}</h5>
+        <h5>Register Date : {{ userData.registerDate }}</h5>
       </div>
     </div>
   </div>

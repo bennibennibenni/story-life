@@ -26,6 +26,10 @@ export class PostCommentComponent implements OnInit {
   loadPostComment() {
     return this.postService.GetPostComment(this.id).subscribe((data: {}) => {
       this.userData = data;
+      this.userData.data.forEach((item) => {
+        let time = item.publishDate.match(/\d\d:\d\d/);
+        item.publishDate = item.publishDate.split('T')[0] + ' - ' + time;
+      });
     });
   }
 }

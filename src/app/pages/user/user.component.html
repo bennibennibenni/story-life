@@ -1,6 +1,6 @@
 <div class="container-lg">
   <div class="row">
-    <div class="col-lg-4 col-xs-12 col" *ngFor="let UserData of UsersList.data">
+    <div class="lg-4 col-xs-12 col" *ngFor="let UserData of UsersList.data">
       <div class="border border-primary">
         <img src="{{ UserData.picture }}" alt="Card example image" />
 
@@ -11,9 +11,6 @@
           <h5 class="card-subtitle">
             {{ UserData.email }}
           </h5>
-          <!-- <p class="card-text">
-            {{ UserData.text }}
-          </p> -->
           <button class="btn-secondary" [routerLink]="['/user/', UserData.id]">
             View Profile
           </button>

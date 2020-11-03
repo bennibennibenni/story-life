@@ -20,6 +20,9 @@ import { TagPostComponent } from './pages/tag-post/tag-post.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+import { SharedService } from './services/shared.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +47,7 @@ import { environment } from '../environments/environment';
       enabled: environment.production,
     }),
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
