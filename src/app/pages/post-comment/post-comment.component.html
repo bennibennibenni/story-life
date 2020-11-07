@@ -1,7 +1,7 @@
-<div class="container" *ngIf="userData.data?.length != 0">
+<div class="container container-md" *ngIf="userData.data?.length != 0">
   <div
     class="border border-primary"
-    style="margin-top: 40px"
+    style="margin-top: 20px; margin-bottom: 20px"
     *ngFor="let UserPostData of userData.data"
   >
     <div class="card-body" style="padding: 20px">
@@ -27,7 +27,10 @@
   </div>
 </div>
 <div class="container" *ngIf="userData.data?.length == 0">
-  <div class="border border-primary" style="margin-top: 40px">
+  <div
+    class="border border-primary"
+    style="margin-top: 20px; margin-bottom: 20px"
+  >
     <div class="col">
       <p class="card-text">There is no comment on this post</p>
     </div>

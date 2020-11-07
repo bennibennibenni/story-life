@@ -1,25 +1,26 @@
-<div class="container-md col" *ngIf="userData.id">
-  <div class="border border-primary">
-    <div class="row flex-middle">
-      <div class="col-xs-12 lg-4 col" style="padding-left: 70px">
-        <img src="{{ userData.picture }}" />
-      </div>
-
-      <div class="lg-8 col">
-        <h5>ID : {{ userData.id }}</h5>
-        <h5>First Name : {{ userData.firstName }}</h5>
-        <h5>Last Name : {{ userData.lastName }}</h5>
-        <h5>Email : {{ userData.email }}</h5>
-        <h5>Gender : {{ userData.gender }}</h5>
-        <h5>Date of Birth : {{ userData.dateOfBirth }}</h5>
-        <h5>Phone : {{ userData.phone }}</h5>
-        <h5>
-          Location : {{ userData.location.state }}
-          {{ userData.location.street }} {{ userData.location.city }}
-          {{ userData.location.country }}
-        </h5>
-        <h5>Register Date : {{ userData.registerDate }}</h5>
+<div class="container container-sm">
+    <div class="col" *ngIf="userData.id">
+      <div class="border border-primary">
+        <div class="row flex-middle">
+          <div class="col-xs-12 lg-4 col" style="padding-left: 70px">
+            <img src="{{ userData.picture }}" />
+          </div>
+          <div class="lg-8 col">
+            <h5>ID : {{ userData.id }}</h5>
+            <h5>First Name : {{ userData.firstName }}</h5>
+            <h5>Last Name : {{ userData.lastName }}</h5>
+            <h5>Email : {{ userData.email }}</h5>
+            <h5>Gender : {{ userData.gender }}</h5>
+            <h5>Date of Birth : {{ userData.dateOfBirth }}</h5>
+            <h5>Phone : {{ userData.phone }}</h5>
+            <h5>
+              Location : {{ userData.location.state }}
+              {{ userData.location.street }} {{ userData.location.city }}
+              {{ userData.location.country }}
+            </h5>
+            <h5>Register Date : {{ userData.registerDate }}</h5>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 </div>

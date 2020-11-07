@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/post.service';
-import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-post',
@@ -12,10 +11,9 @@ export class PostComponent implements OnInit {
   prev = -1;
   PostList: any = [];
 
-  constructor(public postService: PostService, private service: SharedService) {}
+  constructor(public postService: PostService) {}
 
   ngOnInit() {
-    this.service.footer.emit();
     this.loadPost();
   }
 

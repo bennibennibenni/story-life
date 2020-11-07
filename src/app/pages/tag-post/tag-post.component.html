@@ -10,14 +10,13 @@
                 alt="Card example image"
               />
             </div>
-            <div class="col-lg-4">
-              <h5 class="card-title">
-                {{ TagPostData.owner.firstName }}
-                {{ TagPostData.owner.lastName }}
-              </h5>
-              <h5 class="card-title">
+            <div class="lg-4 col-9 align-middle">
+              <div class="card-name">
+                {{ TagPostData.owner.firstName }} {{ TagPostData.owner.lastName }}
+              </div>
+              <div class="card-date">
                 {{ TagPostData.publishDate }}
-              </h5>
+              </div>
             </div>
           </div>
           <img src="{{ TagPostData.image }}" alt="Card example image" />

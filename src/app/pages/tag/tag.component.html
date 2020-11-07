@@ -1,8 +1,10 @@
-<div class="card-container" *ngFor="let TagData of TagList.data">
-  <input
-    type="button"
-    class="btn-secondary"
-    value="{{ TagData }}"
-    [routerLink]="['/tag/', TagData, 'post']"
-  />
+<div class="card-container container-sm">
+    <div class="col" *ngFor="let TagData of TagList.data">
+      <input
+      type="button"
+      class="btn-secondary"
+      value="{{ TagData }}"
+      [routerLink]="['/tag/', TagData, 'post']"
+    />
+    </div>
 </div>
