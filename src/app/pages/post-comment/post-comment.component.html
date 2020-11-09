@@ -26,11 +26,12 @@
     </div>
   </div>
 </div>
-<div class="container" *ngIf="userData.data?.length == 0">
-  <div
-    class="border border-primary"
-    style="margin-top: 20px; margin-bottom: 20px"
-  >
+<div
+  class="container"
+  style="height: 100px; position: absolute; top: 0; bottom: 0; margin: auto"
+  *ngIf="userData.data?.length == 0"
+>
+  <div class="border border-primary">
     <div class="col">
       <p class="card-text">There is no comment on this post</p>
     </div>
